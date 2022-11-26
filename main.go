@@ -15,6 +15,11 @@ func main() {
 			"title": "Scoping",
 		})
 	})
+	router.GET("/task/", getAllTasks)
+	router.GET("/task/:id", getTask)
+	router.POST("/task/create", createTask)
+	router.PUT("/task/:id", updateTask)
+	router.DELETE("/task/:id", deleteTask)
 
 	router.Run(":8080")
 }
